@@ -13,7 +13,6 @@ public:
 	virtual void onTick() {};
 	virtual void onEnable() {};
 	virtual void onDisable() {};
-
 	virtual void onRender() {};
 	virtual void onGmTick() {};
 	virtual void onKey(uint64_t key, bool isDown, bool* cancel) {};

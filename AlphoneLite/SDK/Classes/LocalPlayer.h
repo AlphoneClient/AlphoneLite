@@ -4,6 +4,7 @@ class LocalPlayer : public Actor {
 public:
 	Vec2 lookingVector; //0x0100
 
+	virtual void displayTextObjectMessage(class TextHolder*);
 	virtual void Function261();
 	virtual void Function262();
 	virtual void setSleeping(bool);

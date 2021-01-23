@@ -24,6 +24,14 @@
 
 #define PI 3.14159265359
 
+enum class PacketType {
+	Movement,
+	PlayerAuthInput,
+	Text,
+	ActorFall,
+	Unknown
+};
+
 struct Vec2 {
 	union {
 		struct {

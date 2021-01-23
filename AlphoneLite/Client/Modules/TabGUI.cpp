@@ -22,13 +22,13 @@ std::vector<std::string> SortArrayOfStrings(std::vector<std::string> stringVecAr
 };
 
 void TabGUI::onRender() {
-	RenderUtils::RenderText("AlphoneLite", Vec2(12, 0), MC_Colour(50, 200, 150), 1.0f, 1.0f);
+	RenderUtils::RenderText("AlphoneLite", Vec2(12, 0), MC_Colour(109, 15, 191), 1.0f, 1.0f);
 	if (Minecraft::ClientInstance() != nullptr && Minecraft::ClientInstance()->MinecraftGame()->canUseKeys()) {
 		auto Categories = ClientManager::Categories;
 		auto Modules = ClientManager::GetModulesFromCategory(Categories.at(currentCategory));
 		float boxWidth = RenderUtils::GetTextWidth(SortArrayOfStrings(Categories).back(), 1.0f);
 		Vec4 boxPos = Vec4(10, 0, boxWidth + 30, Categories.size() * 10 + 10);
-		MC_Colour whiteText = MC_Colour(255, 255, 255), selectedColourText = MC_Colour(50, 175, 200);
+		MC_Colour whiteText = MC_Colour(255, 255, 255), selectedColourText = MC_Colour(109, 15, 191);
 		for (int C = 0; C < Categories.size(); C++) {
 			RenderUtils::RenderText(">>", Vec2(boxPos.z - 10, currentCategory * 10 + 10), selectedColourText, 1.0f, selectedCategory ? 1.0f : 0.f);
 			RenderUtils::RenderText(Categories.at(C), Vec2(boxPos.x + 2, C * 10 + 10), selectedCategory && currentCategory == C ? selectedColourText : whiteText, 1.0f, 1.0f);
@@ -40,7 +40,7 @@ void TabGUI::onRender() {
 			}
 			float modulesWidth = RenderUtils::GetTextWidth(SortArrayOfStrings(ModulesText).back(), 1.0f);
 			Vec4 modulesPos = Vec4(boxWidth + 30, 0, boxWidth + modulesWidth + 50, Modules.size() * 10 + 10);
-			RenderUtils::RenderText(Categories.at(currentCategory), Vec2(modulesPos.x + 2, 0), MC_Colour(50, 200, 150), 1.0f, 1.0f);
+			RenderUtils::RenderText(Categories.at(currentCategory), Vec2(modulesPos.x + 2, 0), MC_Colour(109, 15, 191), 1.0f, 1.0f);
 			for (int M = 0; M < Modules.size(); M++) {
 				RenderUtils::RenderText(">>", Vec2(modulesPos.z - 10, currentModule * 10 + 10), selectedColourText, 1.0f, selectedModule ? 1.0f : 0.f);
 				RenderUtils::RenderText(Modules.at(M)->name, Vec2(modulesPos.x + 2, M * 10 + 10), selectedModule && Modules.at(M)->isEnabled ? selectedColourText : whiteText, 1.0f, 1.0f);

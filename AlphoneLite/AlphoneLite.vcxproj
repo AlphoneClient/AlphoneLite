@@ -22,7 +22,7 @@
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{27a13af4-71f1-4471-963b-26aec92c2ec5}</ProjectGuid>
-    <RootNamespace>ClientBase</RootNamespace>
+    <RootNamespace>AlphoneLite</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -156,39 +156,47 @@
   <ItemGroup>
     <ClCompile Include="Client.cpp" />
     <ClCompile Include="Client\ClientManager.cpp" />
+    <ClCompile Include="Client\CommandManager.cpp" />
+    <ClCompile Include="Client\Commands\TestCommand.cpp" />
     <ClCompile Include="Client\Modules\AirJump.cpp" />
     <ClCompile Include="Client\Modules\AutoSprint.cpp" />
-    <ClCompile Include="Client\Modules\CrouchShift.cpp" />
+    <ClCompile Include="Client\Modules\CrouchPhase.cpp" />
     <ClCompile Include="Client\Modules\Gamemode.cpp" />
     <ClCompile Include="Client\Modules\Hitbox.cpp" />
     <ClCompile Include="Client\Modules\Instabreak.cpp" />
     <ClCompile Include="Client\Modules\Jesus.cpp" />
     <ClCompile Include="Client\Modules\Jetpack.cpp" />
     <ClCompile Include="Client\Modules\Killaura.cpp" />
+    <ClCompile Include="Client\Modules\NoFall.cpp" />
     <ClCompile Include="Client\Modules\TabGUI.cpp" />
     <ClCompile Include="Client\Modules\TestModule.cpp" />
     <ClCompile Include="Client\Modules\Uninject.cpp" />
+    <ClCompile Include="Other\Command.cpp" />
     <ClCompile Include="Other\Module.cpp" />
     <ClCompile Include="Other\Utils.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Client\ClientManager.h" />
+    <ClInclude Include="Client\CommandManager.h" />
+    <ClInclude Include="Client\Commands\TestCommand.h" />
     <ClInclude Include="Client\Hooks\ClientInstance.h" />
     <ClInclude Include="Client\Hooks\GameMode.h" />
     <ClInclude Include="Client\Hooks\KeyItem.h" />
     <ClInclude Include="Client\Hooks\RenderContext.h" />
     <ClInclude Include="Client\Modules\AirJump.h" />
     <ClInclude Include="Client\Modules\AutoSprint.h" />
-    <ClInclude Include="Client\Modules\CrouchShift.h" />
+    <ClInclude Include="Client\Modules\CrouchPhase.h" />
     <ClInclude Include="Client\Modules\Gamemode.h" />
     <ClInclude Include="Client\Modules\Hitbox.h" />
     <ClInclude Include="Client\Modules\Instabreak.h" />
     <ClInclude Include="Client\Modules\Jesus.h" />
     <ClInclude Include="Client\Modules\Jetpack.h" />
     <ClInclude Include="Client\Modules\Killaura.h" />
+    <ClInclude Include="Client\Modules\NoFall.h" />
     <ClInclude Include="Client\Modules\TabGUI.h" />
     <ClInclude Include="Client\Modules\TestModule.h" />
     <ClInclude Include="Client\Modules\Uninject.h" />
+    <ClInclude Include="Other\Command.h" />
     <ClInclude Include="Other\Module.h" />
     <ClInclude Include="Other\Utils.h" />
     <ClInclude Include="SDK\Classes\Actor.h" />

@@ -34,13 +34,14 @@ void ClientManager::InitHooks() {
 #include "Modules/Killaura.h"
 #include "Modules/Hitbox.h"
 /* Movement */
-#include "Modules/CrouchShift.h"
+//#include "Modules/CrouchPhase.h"
 #include "Modules/AirJump.h"
 #include "Modules/Jetpack.h"
 #include "Modules/AutoSprint.h"
 #include "Modules/Jesus.h"
 /* Player */
-#include "Modules/Gamemode.h"
+//#include "Modules/Gamemode.h"
+//#include "Modules/Nofall.h"
 /* Visuals */
 #include "Modules/TabGUI.h"
 /* World */
@@ -54,13 +55,14 @@ void ClientManager::InitModules() {
 	Modules.push_back(new Killaura());
 	Modules.push_back(new Hitbox());
 	/* Movement */
-	Modules.push_back(new CrouchShift());
+//	Modules.push_back(new CrouchPhase());
 	Modules.push_back(new AirJump());
 	Modules.push_back(new Jetpack());
 	Modules.push_back(new AutoSprint());
 	Modules.push_back(new Jesus());
 	/* Player */
-	Modules.push_back(new Gamemode());
+//	Modules.push_back(new Gamemode());
+//	Modules.push_back(new NoFall());
 	/* Visuals */
 	Modules.push_back(new TabGUI());
 	/* World */

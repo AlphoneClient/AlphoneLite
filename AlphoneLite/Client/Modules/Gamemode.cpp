@@ -1,6 +1,5 @@
 #include "GameMode.h"
 
-int Gamemode::GamemodeValue = 1;
 int savedGamemodeValue;
 
 void Gamemode::onEnable() {
