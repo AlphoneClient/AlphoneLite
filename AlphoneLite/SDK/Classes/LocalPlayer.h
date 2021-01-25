@@ -3,6 +3,7 @@
 class LocalPlayer : public Actor {
 public:
 	Vec2 lookingVector; //0x0100
+	Vec3 DefaultPosition;
 
 	virtual void displayTextObjectMessage(class TextHolder*);
 	virtual void Function261();

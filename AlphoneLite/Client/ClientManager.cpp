@@ -40,10 +40,12 @@ void ClientManager::InitHooks() {
 #include "Modules/AutoSprint.h"
 #include "Modules/Jesus.h"
 /* Player */
+#include "Modules/Phase0.h"
 //#include "Modules/Gamemode.h"
 //#include "Modules/Nofall.h"
 /* Visuals */
 #include "Modules/TabGUI.h"
+#include "Modules/ModuleList.h"
 /* World */
 #include "Modules/Instabreak.h"
 /* Other */
@@ -61,10 +63,12 @@ void ClientManager::InitModules() {
 	Modules.push_back(new AutoSprint());
 	Modules.push_back(new Jesus());
 	/* Player */
+	Modules.push_back(new Phase0());
 //	Modules.push_back(new Gamemode());
 //	Modules.push_back(new NoFall());
 	/* Visuals */
 	Modules.push_back(new TabGUI());
+	Modules.push_back(new ModuleList());
 	/* World */
 	Modules.push_back(new Instabreak());
 	/* Other */

@@ -10,4 +10,7 @@ public:
 	static std::vector<std::string> Categories;
 
 	static std::vector<class Module*> GetModulesFromCategory(std::string Category);
+	static std::vector<Module*> GetModules() {
+		return Modules;
+	}
 };

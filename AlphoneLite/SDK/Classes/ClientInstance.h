@@ -15,6 +15,18 @@ public:
 			return nullptr;
 		}
 	}
+	class GuiData
+	{
+	public:
+		char pad_0000[40]; //0x0000
+		Vec2 ScaledResolution; //0x0028
+		char pad_0030[16]; //0x0030
+	}; //Size: 0x0040
+
+	class GuiData* GuiData() {
+		uintptr_t** VTable = (uintptr_t**)this;
+		return reinterpret_cast<class GuiData*>(VTable[155]);
+	};
 	class MinecraftGame* MinecraftGame() {
 		if (this != nullptr) {
 			return *reinterpret_cast<class MinecraftGame**>(reinterpret_cast<__int64>(this) + 0x98);

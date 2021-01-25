@@ -180,6 +180,20 @@ void RenderUtils::FillRectangle(Vec4 position, MC_Colour colour, float alpha) {
 	}
 }
 
+std::vector<std::string> Utils::smallestToBiggestStringVec(std::vector<std::string> strArr) {
+	for (int I = 0; I < strArr.size(); I++) {
+		std::string temp = strArr[I];
+
+		int J = I - 1;
+		while (J >= 0 && temp.length() < strArr[J].length()) {
+			strArr[J + 1] = strArr[J];
+			J--;
+		}
+		strArr[J + 1] = temp;
+	}
+	return strArr;
+}
+
 void RenderUtils::DrawRectangle(Vec4 position, MC_Colour colour, float alpha, float lineWidth) {
 	if (CachedContext != nullptr) {
 		lineWidth /= 2;

@@ -6,6 +6,7 @@ public:
 	std::string name, category, description;
 	uint64_t key;
 	bool isEnabled = false, wasEnabled = false;
+	bool enabled = false;
 	Module(std::string name, std::string category, std::string description, uint64_t key = NULL);
 	
 	void onBaseTick();

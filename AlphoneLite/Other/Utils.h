@@ -122,11 +122,8 @@ struct Vec3 {
 		};
 		float arr[3];
 	};
-
 	Vec3() { x = y = z = 0; }
-	Vec3(float x, float y, float z) {
-		this->x = x, this->y = y, this->z = z;
-	}
+	Vec3(float x, float y, float z) {this->x = x, this->y = y, this->z = z;}
 
 	bool operator == (Vec3 v) { return v.x == x && v.y == y && v.z == z; };
 	bool operator != (Vec3 v) { return v.x != x || v.y != y || v.z != z; };
@@ -380,6 +377,7 @@ public:
 	static uintptr_t FindAddr(uintptr_t, std::vector<unsigned int>);
 	static uintptr_t FindSig(const char*);
 	static std::string ptrToStr(uintptr_t);
+	static std::vector<std::string> smallestToBiggestStringVec(std::vector<std::string> strArr);
 
 	static std::map<uint64_t, bool> KeyMapping;
 	static bool usingKey(uint64_t);
@@ -390,6 +388,7 @@ private:
 	static class MinecraftUIRenderContext* CachedContext;
 	static class BitmapFont* CachedFont;
 public:
+
 	static void SetContext(class MinecraftUIRenderContext* Context, class BitmapFont* Font);
 	static void FlushText();
 	static float GetTextWidth(std::string text, float textSize);

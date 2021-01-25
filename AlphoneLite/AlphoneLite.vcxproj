@@ -167,7 +167,9 @@
     <ClCompile Include="Client\Modules\Jesus.cpp" />
     <ClCompile Include="Client\Modules\Jetpack.cpp" />
     <ClCompile Include="Client\Modules\Killaura.cpp" />
+    <ClCompile Include="Client\Modules\ModuleList.cpp" />
     <ClCompile Include="Client\Modules\NoFall.cpp" />
+    <ClCompile Include="Client\Modules\Phase0.cpp" />
     <ClCompile Include="Client\Modules\TabGUI.cpp" />
     <ClCompile Include="Client\Modules\TestModule.cpp" />
     <ClCompile Include="Client\Modules\Uninject.cpp" />
@@ -192,7 +194,9 @@
     <ClInclude Include="Client\Modules\Jesus.h" />
     <ClInclude Include="Client\Modules\Jetpack.h" />
     <ClInclude Include="Client\Modules\Killaura.h" />
+    <ClInclude Include="Client\Modules\ModuleList.h" />
     <ClInclude Include="Client\Modules\NoFall.h" />
+    <ClInclude Include="Client\Modules\Phase0.h" />
     <ClInclude Include="Client\Modules\TabGUI.h" />
     <ClInclude Include="Client\Modules\TestModule.h" />
     <ClInclude Include="Client\Modules\Uninject.h" />
